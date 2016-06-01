@@ -36,3 +36,50 @@ singleVal = array.reduce(function(firstVal, curVal) {
 }, 0);
 
 console.log(singleVal);
+
+//Array filter() method
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+function bigArray(val) {
+    return val > 5;
+}
+
+var filtered = [1, 3, 5, 67, 32 , 23, 5, 2, 4 ].filter(bigArray);
+
+console.log(filtered);
+
+
+// Taken from the Mozilla dev page linked above
+//Create JSON object
+var arr = [
+    { id: 15 },
+    { id: -1 },
+    { id: 0 },
+    { id: 3 },
+    { id: 12.2 },
+    { },
+    { id: null },
+    { id: NaN },
+    { id: 'undefined' }
+];
+
+var invalidEntries = 0;
+
+//typeof is a built in Javascript operator that will return a string to indicate the type of an object
+function filterByID(obj) {
+    if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+        return true;
+    } else {
+        invalidEntries++; //Count the number of elements removed
+        return false;
+    }
+}
+
+var arrByID = arr.filter(filterByID);
+
+console.log('Filtered Array\n', arrByID);
+// Filtered Array
+// [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
+
+console.log('Number of Invalid Entries = ', invalidEntries);
+// Number of Invalid Entries = 4
