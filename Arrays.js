@@ -46,7 +46,7 @@ function bigArray(val) {
 
 var filtered = [1, 3, 5, 67, 32 , 23, 5, 2, 4 ].filter(bigArray);
 
-console.log(filtered);
+console.log("Filtered Arrays ", filtered);
 
 
 // Taken from the Mozilla dev page linked above
@@ -83,3 +83,35 @@ console.log('Filtered Array\n', arrByID);
 
 console.log('Number of Invalid Entries = ', invalidEntries);
 // Number of Invalid Entries = 4
+
+
+//sort() method on arrays
+
+var arrayA = [1, 12, 21, 2];
+
+
+function sortA(a, b) {
+    return b - a; //This will return largest to smallest, changing to a - b will be smallest to largest sort.
+}
+
+console.log("Sort Array largest to smallest", arrayA.sort(sortA));
+
+//concat() used to concatenate 2 arrays together into a single array
+
+var oldArray = [1,2,3];
+var newArray = [];
+
+var concatMe = [4,5,6];
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
+newArray = oldArray.concat("Two arrays combined: ", concatMe);
+
+
+//split() method to turn a string into an array
+
+var string = "Split me into an array";
+
+array = string.split(" ");
+
+console.log(array);
