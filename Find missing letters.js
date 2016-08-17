@@ -12,12 +12,12 @@ function fearNotLetter(str) {
     alphabet = alphabet.split("");
     str = str.split("");
 
-    if(str[0] != "a") {
+    if(str[0] !== "a") {
         return undefined;
     }
 
     for(var i = 0; i < str.length; i++) {
-        if(str[i] != alphabet[i]) {
+        if(str[i] !== alphabet[i]) {
             return alphabet[i];
         }
     }
