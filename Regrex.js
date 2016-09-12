@@ -8,11 +8,11 @@ function spinalCase(str) {
     // --David St. Hubbins
 
     //Remove whitespace and underscores from string
-    var newStr = (/\s+|_/g);
+    var newStr = /\s+|_/g;
 
     //Replace lower case letters at pos 1, 2 with uppercase
     str = str.replace(/([a-z])([A-Z])/g, '$1 $2');
-
+        
     //Split white space with dash
     return final = str.replace(newStr, '-').toLowerCase();
 }
