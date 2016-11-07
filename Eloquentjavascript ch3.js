@@ -1,5 +1,7 @@
 /**
  * Created by conor on 11/3/16.
+ *
+ * http://eloquentjavascript.net/03_functions.html
  */
 
 /*
@@ -48,3 +50,4 @@ console.log(isEven(75));
 console.log(isEven(-1));
 
 console.log(isEven(-10002));
+
