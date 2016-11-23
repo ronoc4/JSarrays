@@ -10,17 +10,20 @@ for (var i = 0; i < numbers.length; i++) {
     total += numbers[i];
 }
 
-console.log(total);
+console.log("Total is: " + total);
 
-var message = "";
+function reducing() {
+    var message = "";
+    words = ["reducing", "is", "simple"];
 
-var words = ["reducing", "is", "simple"];
+    for (var j = 0; j < words.length; j++ ){
+        message += words[j];
+    }
 
-for (var j = 0; j < words.length; j++ ){
-    message += words[j];
+    return words;
 }
 
-console.log(message);
+console.log("Reducing: " + reducing());
 
 
 
@@ -35,7 +38,7 @@ singleVal = array.reduce(function(firstVal, curVal) {
     return firstVal + curVal;
 }, 0);
 
-console.log(singleVal);
+console.log(" Reduce to single Value: " + singleVal);
 
 //Array filter() method
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
